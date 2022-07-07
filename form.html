@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function validate() {
+        var x = document.getElementById("vehicle1").value;
+        var y = document.getElementById("no").value;
+        if (x == "on") {
+          var z = 7500 * y;
+          document.getElementById("non").value = z;
+        }
+      }
+      function val() {
+        var x = document.getElementById("vehicle1").value;
+        if (x == "off") {
+          document.getElementById("vehicle1").value = "on";
+        } else if (x == "on") {
+          document.getElementById("vehicle1").value = "off";
+        }
+      }
+      function val2() {
+        var x = document.getElementById("vehicle2").value;
+        if (x == "off") {
+          document.getElementById("vehicle2").value = "on";
+        } else if (x == "on") {
+          document.getElementById("vehicle2").value = "off";
+        }
+      }
+      function vali2() {
+        var x = document.getElementById("vehicle2").value;
+        var y = document.getElementById("nor").value;
+        if (x == "on") {
+          var z = 5000 * y;
+          document.getElementById("no2").value = z;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <b> Name: </b>
+    <input type="text" id="f_name" /><br />
+    <b> Mobile No: </b>
+    <input
+      type="tel"
+      id="mobile"
+      minlength="10"
+      maxlength="10"
+      pattern="[6-9]{1}[0-9]{9}"
+    /><br />
+    <b>number of people:</b>
+    <input type="number" min="1" /><br />
+    <b>vechicles required:</b>
+    <label>
+      Car of max8:
+      <input type="checkbox" id="vehicle1" value="off" onchange="val()" />
+    </label>
+    <input type="number" min="0" id="no" />
+    <input type="number" id="non" readonly />
+    <button onclick="validate()">Submit</button><br />
+    <label>
+      car of max5:
+      <input type="checkbox" id="vehicle2" value="off" onchange="val2()" />
+      <input type="number" min="0" id="nor" />
+      <input type="number" id="no2" readonly />
+
+      <button onclick="vali2()">submit</button>
+    </label>
+  </body>
+</html>

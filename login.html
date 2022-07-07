@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LogedIn</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="home.css" />
+    <script src="login.js"></script>
+    <script src="YesNo.js"></script>
+  </head>
+
+  <!--Body-->
+  <body>
+    <!--Header Section-->
+    <div class="header">
+      <h1 style="color: #a38156">Palakkad Tourism</h1>
+      <p style="color: #876b46">The beauty of kerala<b> Palakkad</b></p>
+    </div>
+
+    <!--Navigation Bar-->
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="#hotels">Hotels</a>
+
+      <a href="index.html#log">Logout</a>
+    </div>
+
+    <!--Content Section-->
+    <div class="row">
+      <!--Side Content-->
+      <div class="side">
+        <br />
+        <h2>Palakkad: Hotels and Travels</h2>
+        <h5>Have a good stay at Palakkad</h5>
+        <div style="height: 250px">
+          <video width="100%" height="200" controls autoplay muted loop>
+            <source src="20220505_2160p.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>Palakkad hotels</h2>
+        <h5>Rooms for Stay</h5>
+        <img src="imgh/hotel1.jpg" alt="hotel1" />
+        <p>Fig: Ammbadi</p>
+        <br />
+        <img src="imgh/hotel2.jpg" alt="hotel2" />
+        <p>Fig: Soorya</p>
+        <br />
+        <img src="imgh/hotel3.jpg" alt="hotel3" />
+        <p>Fig: Parambikulam</p>
+      </div>
+
+      <!--Main Content-->
+      <div class="main">
+        <div id="login"></div>
+        <br /><br /><br /><br /><br /><br />
+        <a href="#food"> <img src="imgh/food1.jpg" /></a>
+        <br /><br /><br /><br /><br /><br /><br />
+        <a href="#hotel"> <img src="imgh/hotel2.jpg" /></a>
+        <br /><br /><br /><br /><br /><br /><br />
+        <a href="#transport"> <img src="imgh/v1.jpg" /></a>
+        <br /><br />
+        <p>
+          You can book food, vechicles and rooms for your visit in this webpages
+        </p>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div id="hotels"></div>
+
+        <h2>HOTELS</h2>
+        <img src="imgh/hotel1.jpg" />
+        <img src="imgh/hotel2.jpg" />
+        <img src="imgh/hotel3.jpg" />
+        <br />
+        <br />
+        <center>
+          <table
+            border="2 solid black"
+            style="font-size: large; margin-bottom: 15%"
+          >
+            <tr>
+              <th>Categories</th>
+              <th>Price</th>
+              <th>quantity</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td>2000</td>
+              <td>
+                <input
+                  type="number"
+                  id="non"
+                  min="0"
+                  value="0"
+                  oninput="norroom()"
+                />
+              </td>
+              <td>
+                <input id="nonr" type="number" min="0" value="0" readonly />
+              </td>
+            </tr>
+            <tr>
+              <td>Delux</td>
+              <td>3000</td>
+              <td>
+                <input
+                  type="number"
+                  id="noi"
+                  min="0"
+                  value="0"
+                  oninput="inroom()"
+                />
+              </td>
+              <td>
+                <input id="noir" type="number" min="0" value="0" readonly />
+              </td>
+            </tr>
+            <tr>
+              <td>Suite</td>
+              <td>4000</td>
+              <td>
+                <input
+                  type="number"
+                  id="nos"
+                  min="0"
+                  value="0"
+                  oninput="suiroom()"
+                />
+              </td>
+              <td>
+                <input id="nosr" type="number" min="0" value="0" readonly />
+              </td>
+            </tr>
+            <tr>
+              <th colspan="3">
+                <button type="button" onclick="sum()">TOTAL</button>
+              </th>
+              <th><input id="bal" type="number" value="0" readonly /></th>
+            </tr>
+          </table>
+          <br />
+          <p>Are use sure to continue with your booking?</p>
+          <button onclick="yes1()">YES</button>
+          <button onclick="no1()">NO</button>
+          <br />
+        </center>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div id="transport"></div>
+        <br />
+
+        <h2>Transport</h2>
+        <img src="imgh/v1.jpg" />
+        <img src="imgh/v3.jpg" />
+        <img src="imgh/v4.jpg" />
+        <img src="imgh/v6.png" />
+        <center>
+          <table border="2 solid black" style="font-size: large">
+            <caption>
+              Transport
+            </caption>
+            <tr>
+              <th>vechicles</th>
+              <th>capacity</th>
+              <th>Requirement</th>
+              <th>Days</th>
+              <th>Price</th>
+              <th>amount</th>
+            </tr>
+            <tr>
+              <td>CAR</td>
+              <td>Max5</td>
+              <td>
+                <input
+                  type="number"
+                  id="car1"
+                  value="0"
+                  min="0"
+                  oninput="car1f()"
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  id="car1d"
+                  value="0"
+                  min="0"
+                  oninput="car1f()"
+                />
+              </td>
+              <td>4500/day</td>
+              <td><input type="text" id="car1o" readonly /></td>
+            </tr>
+            <tr>
+              <td>CAR lar.</td>
+              <td>Max8</td>
+              <td>
+                <input
+                  type="number"
+                  id="car2"
+                  value="0"
+                  min="0"
+                  oninput="car2f()"
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  id="car2d"
+                  value="0"
+                  min="0"
+                  oninput="car2f()"
+                />
+              </td>
+              <td>7000/day</td>
+              <td><input type="text" id="car2o" readonly /></td>
+            </tr>
+            <tr>
+              <td>Two Wheeler</td>
+              <td>Max2</td>
+              <td>
+                <input
+                  type="number"
+                  id="car3"
+                  value="0"
+                  min="0"
+                  oninput="car3f()"
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  id="car3d"
+                  value="0"
+                  min="0"
+                  oninput="car3f()"
+                />
+              </td>
+              <td>800/day</td>
+              <td><input type="text" id="car3o" readonly /></td>
+            </tr>
+            <tr>
+              <th colspan="5">
+                <button type="button" onclick="car()" style="width: 600px">
+                  Total
+                </button>
+              </th>
+              <th><input type="text" id="car" readonly /></th>
+            </tr>
+          </table>
+          <p>
+            Would like to order Some foods.
+            <button type="button" onclick="yes2()">Yes</button>
+            <button type="button" onclick="no2()">No</button>
+          </p>
+        </center>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div id="food"></div>
+        <br />
+
+        <h2>Food</h2>
+        <br />
+        <br />
+        <img src="imgh/food1.jpg" />
+        <img src="imgh/food3.jpg" />
+        <img src="imgh/food5.jpg" />
+        <br /><br /><br />
+        <center>
+          <table border="2px solid black">
+            <caption>
+              FOOD PRICE CHART
+            </caption>
+            <tr>
+              <th>FOOD</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>amount</th>
+            </tr>
+            <tr>
+              <td>Breakfast</td>
+              <td>
+                <input min="0" type="number" id="f1" oninput="breakfast()" />
+              </td>
+              <td>150</td>
+              <td><input type="number" id="f2" readonly /></td>
+            </tr>
+            <tr>
+              <td>Lunch</td>
+              <td><input min="0" type="number" id="f3" oninput="lunch()" /></td>
+              <td>350</td>
+              <td>
+                <input type="number" id="f4" readonly />
+              </td>
+            </tr>
+            <tr>
+              <td>Dinner</td>
+              <td>
+                <input type="number" id="f5" min="0" oninput="dinner()" />
+              </td>
+              <td>300</td>
+              <td><input type="number" id="f6" readonly /></td>
+            </tr>
+            <tr>
+              <th colspan="3">
+                <button type="button" onclick="price()" style="width: 290px">
+                  Total
+                </button>
+              </th>
+              <th><input type="number" id="f7" readonly /></th>
+            </tr>
+          </table>
+
+
+          <br />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </center>
+      </div>
+    </div>
+
+    <!--Footer Section-->
+    <div class="footer">
+      <h1>Palakkad</h1>
+    </div>
+  </body>
+</html>
